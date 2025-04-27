@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package proto;
 
-import "common.proto";
+import "common_product.proto";
 
 option go_package = "./pkg/service";
 
