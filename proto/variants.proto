@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package proto;
+
+import "common.proto";
+
+option go_package = "./pkg/service";
+
+service ProductVariantService {
+  rpc CheckProductVariantExists(CheckProductVariantRequest) returns (CheckProductVariantResponse);
+  rpc GetProductVariants(GetProductVariantsRequest) returns (GetProductVariantsResponse);
+}
+
+message CheckProductVariantRequest {
+  uint32 product_variant_id = 1;
+}
+message CheckProductVariantResponse {
+  bool exists = 1;
+  bool is_active = 2;
+}
+
+message GetProductVariantsRequest {
+  repeated uint32 product_variant_ids = 1;
+}
+message GetProductVariantsResponse {
+  repeated ProductVariant product_variants = 1;
+}
