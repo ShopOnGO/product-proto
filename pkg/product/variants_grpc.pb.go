@@ -4,7 +4,7 @@
 // - protoc             v5.29.3
 // source: variants.proto
 
-package service
+package product
 
 import (
 	context "context"
@@ -19,8 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	ProductVariantService_CheckProductVariantExists_FullMethodName = "/proto.ProductVariantService/CheckProductVariantExists"
-	ProductVariantService_GetProductVariants_FullMethodName        = "/proto.ProductVariantService/GetProductVariants"
+	ProductVariantService_CheckProductVariantExists_FullMethodName = "/product_variant.ProductVariantService/CheckProductVariantExists"
+	ProductVariantService_GetProductVariants_FullMethodName        = "/product_variant.ProductVariantService/GetProductVariants"
 )
 
 // ProductVariantServiceClient is the client API for ProductVariantService service.
@@ -142,7 +142,7 @@ func _ProductVariantService_GetProductVariants_Handler(srv interface{}, ctx cont
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var ProductVariantService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "proto.ProductVariantService",
+	ServiceName: "product_variant.ProductVariantService",
 	HandlerType: (*ProductVariantServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

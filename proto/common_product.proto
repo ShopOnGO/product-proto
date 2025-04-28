@@ -1,10 +1,10 @@
 syntax = "proto3";
 
-package proto;
+package product_variant;
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "./pkg/service";
+option go_package = "./pkg/product";
 
 message Model {
   uint32 id = 1;
